@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Petrona:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --color-primary: #6C9BCF;
+    --color-danger: #FF0060;
+    --color-success: #1B9C85;
+    --color-warning: #F7D060;
+    --color-white: #fff;
+    --color-info-dark: #7d8da1;
+    --color-dark: #000000;
+    --color-light: rgba(132, 139, 200, 0.18);
+    --color-dark-variant: #677483;
+    --color-background: #ffffff;
+    --color-font: #000000;
+
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 1.2rem;
+
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+
+    --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-font);
+  }
+
+.background{
+    background-color: var(--color-background);
+}
+.font-color,a{
+    color: var(--color-font);
+}
+
+*{
+    font-family: "Petrona", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+a{
+    text-decoration: none;
+}
+.cover{
+    background-image: linear-gradient(to right, #22c1c3 , #e579f3);
+    background-size: 100%;
+}
+.setting-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+.setting {
+    animation: loader 3s infinite;
+    width: 30px;
+    height: 30px;
+    color: var(--color-font);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes loader {
+    0% {
+      rotate: 0deg;
+    }
+    100% {
+      border-radius: 50%;
+      rotate: 180deg;
+    }
+}
+
+.darkMood{
+    --color-background: #000000;
+    --color-font: #ffffff;
+    background-image: linear-gradient(to right, #3b3b3b , #232024);
+}
+
+.slide-bar{
+    position: sticky;
+    top: 0;
+    width: 25vw;
+    height: 100vh;
+    overflow-y: scroll;
+    transition: all 0.5s ease-in-out;
+    display: block;
+    z-index: 20;
+    overflow-x: hidden;
+}
+
+.nav-item{
+    border: 1px solid var(--color-font);
+}
+
+.nav-inner-item{
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    transition: all 1s ease-in-out;
+}
+.droupdown-icon{
+    transition: all 1s ease-in-out;
+
+}
+.rotate{
+    transform: rotate(180deg);
+}
+
+.content{
+    width: 80vw;
+}
+
+@media (max-width:770px) {
+    .slide-bar{
+        display: none;
+        position: fixed;
+        width: 0vw;
+        overflow-x: hidden;
+    }
+}
+
+.transition{
+    transition: all 1s ease-in-out;
+}
+
+.test{
+    height: 200vh;
+}
